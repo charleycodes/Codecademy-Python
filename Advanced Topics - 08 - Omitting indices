@@ -1,0 +1,32 @@
+# If you don't pass a particular index to the list slice, Python will pick a default.
+
+"""
+to_five = ['A', 'B', 'C', 'D', 'E']
+
+print to_five[3:] # prints ['D', 'E'] 
+
+print to_five[:2] # prints ['A', 'B']
+
+print to_five[::2] # print ['A', 'C', 'E']
+"""
+
+# The default starting index is 0.
+# The default ending index is the end of the list.
+# The default stride is 1.
+
+# Use list slicing to print out every odd element of my_list from start to finish.
+# Omit the start and end index. You only need to specify a stride.
+# Check the Hint if you need help.
+
+# Remember, the syntax for list slicing is
+
+"""
+[start:end:stride]
+"""
+
+# Since you're using the entire list, you should leave out the start and end indices (but leave in the colons!) and give the slice a 
+# stride that will select every other (that is, odd) element.
+
+my_list = range(1, 11) # List of numbers 1 - 10
+
+print my_list[::2] # returns [1, 3, 5, 7, 9]
