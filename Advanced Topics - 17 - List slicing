@@ -1,0 +1,30 @@
+# Great! Next up: list slicing.
+
+"""
+str = "ABCDEFGHIJ"
+start, end, stride = 1, 6, 2
+str[start:end:stride]
+"""
+
+# You can think of a Python string as a list of characters.
+
+# The string in the editor is garbled in two ways:
+# First, our message is backwards;
+# Second, the letter we want is every other letter.
+# Use list slicing to extract the message and save it to a variable called message.
+
+# It's important to remember that lists are mutable (changeable) in Python, but strings aren't; when you slice a string, you get back a 
+# new string. The original string is unchanged unless you purposely "save over" it, like this:
+
+"""
+my_string = "Monty Python" # => Monty Python
+my_string = my_string[:-7] # => Monty   
+"""
+
+garbled = "!XeXgXaXsXsXeXmX XtXeXrXcXeXsX XeXhXtX XmXaX XI"
+
+forwards = garbled[::-1]
+print forwards # prints IX XaXmX XtXhXeX XsXeXcXrXeXtX XmXeXsXsXaXgXeX!
+
+message = forwards[::2]
+print message # prints I am the secret message!
