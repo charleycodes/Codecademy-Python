@@ -12,3 +12,6 @@ filter(lambda x: x % 3 == 0, cubes)
 
 # You'll want to filter for x >=30 and x <=70.
 
+squares = [x ** 2 for x in range(1, 11)]
+
+print filter(lambda x: x >= 30 and x <= 70, squares) # prints [36, 49, 64]
