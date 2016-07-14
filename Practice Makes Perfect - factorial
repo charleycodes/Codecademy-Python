@@ -1,0 +1,20 @@
+# All right! Now we're cooking. Let's try a factorial problem.
+# To calculate the factorial of a non-negative integer x, just multiply all the integers from 1 through x. For example:
+# factorial(4) would equal 4 * 3 * 2 * 1, which is 24.
+# factorial(1) would equal 1.
+# factorial(3) would equal 3 * 2 * 1, which is 6.
+
+# Define a function factorial that takes an integer x as input.
+# Calculate and return the factorial of that number.
+
+# Consider having factorial() call itself.  When the input is 1, your function could just return 1.  Otherwise, it coudl return the
+# number multiplied by factorial(n - 1)
+# Note that mathematically, factorial(0) is 1.
+
+def factorial(x):
+    if x < 2:
+        return 1 # because 1! is 1, and 0! is also 1.
+    else:
+        return x * factorial(x - 1) # will cycle through until it gets to factorial(0)
+
+print factorial(9) # 9! = 9*8*7*6*5*4*3*2*1 = 362880
