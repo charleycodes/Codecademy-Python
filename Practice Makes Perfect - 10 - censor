@@ -1,0 +1,17 @@
+# Write a function called censor that takes two strings, text and word, as input.  It should return the text with the word you chose
+# replaced with asterisks.  
+# For example:  censor("this hack is wack hack", "hack") should return "this **** is wach ****"
+# Assume your input strings won't contain punctuation or upper case letters.
+# The number of asterisks you put should correspond to the number of letters in the censored word.
+
+# You can use string.split() and " ".join(list) to help you here.
+# Remember:  "*" * 4 equals "****"
+# After splitting the string with string.split(), you can loop through the indices in the list and replace the words you are looking for 
+# with their asterisk equivalent.  Join the list at the end to get your sentence.
+
+def censor(text, word):
+    if word in text:
+        text = text.replace(word, "*" * len(word))
+    return text
+
+print censor("what the hell", "hell")
