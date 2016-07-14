@@ -1,0 +1,38 @@
+# Great work! You've covered a lot in these exercises. Last but not least, let's write a function to find the median of a list.
+# The median is the middle number in a sorted sequence of numbers.
+# Finding the median of [7,12,3,1,6] would first consist of sorting the sequence into [1,3,6,7,12] and then locating the middle value, 
+# which would be 6.
+# If you are given a sequence with an even number of elements, you must average the two elements surrounding the middle.
+# For example, the median of the sequence [7,3,1,4] is 3.5, since the middle elements after sorting the list are 3 and 4 and 
+# (3 + 4) / (2.0) is 3.5.
+# You can sort the sequence using the sorted() function, like so: sorted([5, 2, 3, 1, 4]) returns [1, 2, 3, 4, 5]
+
+# Write a function called median that takes a list as an input and returns the median value of the list.
+# For example: median([1,1,2]) should return 1.
+# The list can be of any size and the numbers are not guaranteed to be in any particular order.
+# If the list contains an even number of elements, your function should return the average of the middle two.
+
+# In order to find the median of a list with an even number of elements, you're going to need to find the indices of the middle two 
+# elements.
+# You can find the middle two elements by halving the length of the array to find the index of the first element, and subtracting one 
+# from the first index to find the second index.
+# For example, with an array of length 6 like [0,1,2,3,4,5], the two middle elements that need to be averaged in order find the median 
+# would be 2 and 3. You get 3 by cutting the length of the array in half and 2 by subtracting 1 from the previous index: 3. You can use 
+# a similar pattern to find the middle element of an odd-length list.
+# Last but not least, note that (2 + 3) / 2 is not the same as (2 + 3) / 2.0! The former is integer division, meaning Python will try to 
+# give you an integer back. You'll want a float, so something like (2 + 3) / 2.0 is the way to go.
+
+def median(number_list):
+    sorted_list = sorted(number_list) # sort the numbers in order
+    list_length = len(sorted_list)
+    if list_length % 2 != 0: # if there are an odd number of elements
+        median_index = list_length / 2 # if there were 5 elements, this would be 2 (2.5 rounded down), which is the index of the third number
+        list_median = sorted_list[median_index]
+    else: # if there are an even number of elements
+        median_index1 = list_length / 2 - 1
+        median_index2 = list_length / 2
+        list_median = (sorted_list[median_index1] + sorted_list[median_index2]) / 2.0 # use a float to ensure we get the actual average
+    return list_median
+
+print median([7, 3, 1, 4]) # returns 3.5
+        
