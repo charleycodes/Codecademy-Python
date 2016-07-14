@@ -8,3 +8,11 @@
 # It'll probably be useful to use the *= operator.
 # Be careful not to start your total at 0, as this would make the overall result of the multiplication equal to 0! 
 # (Anything multiplied by zero equals zero.)
+
+def product(integer_list):
+    total_product = 1 # set counter to 1, since it will be multiplied
+    for integer in integer_list: # for each intege rin the list
+        total_product *= integer # multiply it by the total_product
+    return total_product
+
+print product([4, 5, 5]) # returns 100 (4 * 5 * 5)
