@@ -1,0 +1,16 @@
+# Define a function called reverse that takes a string text and returns that string in reverse.
+# For example:  reverse("abcd") should return "dcba"
+# You may not use reversed or [::-1] to help you with this
+# You may get a string containing special characters (for example, !, @, or #)
+
+# Consider how you would loop through text starting from the last character through the first character.
+
+def reverse(text):
+    new_string = [] # create an empty list
+    index = len(text) 
+    while index:
+        index -= 1 # gets you to the index value of the last item in the string (on the first loop)
+        new_string.append(text[index]) # append the value at that index to the list you created
+    return ''.join(new_string) # return the joined string
+        
+print reverse("abcd") # prints dcba
