@@ -1,0 +1,15 @@
+# Great work! See? This list slicing business is pretty straightforward.
+# Let's do one more, just to prove you really know your stuff.
+
+# Create a list, to_21, that's just the numbers from 1 to 21, inclusive.
+# Create a second list, odds, that contains only the odd numbers in the to_21 list (1, 3, 5, and so on). Use list slicing for this one 
+# instead of a list comprehension.
+# Finally, create a third list, middle_third, that's equal to the middle third of to_21, from 8 to 14, inclusive.
+
+to_21 = range(1,22) # returns #s 1 to 21 inclusive
+odds = to_21[::2] # returns every odd  number
+middle_third = to_21[7:14] # returns #s 8 through 14
+
+print to_21 # prints [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
+print odds # prints [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21]
+print middle_third # prints [8, 9, 10, 11, 12, 13, 14]
