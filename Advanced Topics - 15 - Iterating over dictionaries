@@ -1,0 +1,23 @@
+# First, let's review iterating over a dict.
+
+# Call the appropriate method on movies such that it will print out all the items (hint, hint) in the dictionary—that is, each key and 
+# each value.
+
+"""
+movies = {
+	"Monty Python and the Holy Grail": "Great",
+	"Monty Python's Life of Brian": "Good",
+	"Monty Python's Meaning of Life": "Okay"
+}
+"""
+
+# You'll just want to print the result of calling the .items() method on your movies. No loops necessary!
+
+movies = {
+	"Monty Python and the Holy Grail": "Great",
+	"Monty Python's Life of Brian": "Good",
+	"Monty Python's Meaning of Life": "Okay"
+}
+
+print movies.items() # prints [("Monty Python's Life of Brian", 'Good'), ("Monty Python's Meaning of Life", 'Okay'), ('Monty Python and 
+# the Holy Grail', 'Great')]
