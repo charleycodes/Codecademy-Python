@@ -1,0 +1,21 @@
+# Write a function called digit_sum that takes a positive integer n as input and returns the sum of all that number's digits.
+# For example: digit_sum(1234) should return 10 which is 1 + 2 + 3 + 4 = 10
+# Assume that the number you are given will always be positive.
+# One way might be to convert the integer to a string with str(), divide it up, and turn the substrings back into integers with int() 
+# to do the addition.
+# If you're looking for a challenge, try this: to get the rightmost digit of a number, you can modulo (%) the number by 10. To remove 
+# the rightmost digit you can floor divide (//) the number by 10. (Don't worry if you're not familiar with floor division—you can look 
+# up the documentation here. Remember, this is a challenge!)
+# Try working this into a pattern to isolate all of the digits and add them to a total.
+
+def digit_sum(n):
+    running_sum = 0 # start a count at 0
+    for i in range(len(str(n))): # this will loop through i times, where i is the number of numbers in n
+        last_digit = n % 10 # gives you the last digit of the number
+        running_sum += last_digit # adds that number to our counter
+        n = n // 10 # divides the number by 10 and rounds down to the nearest integer
+    return running_sum
+
+print digit_sum(1234) # 1 + 2 + 3 + 4 = 10
+print digit_sum(56) # 5 + 6 = 11
+print digit_sum(434) # 4 + 3 + 4 = 11
