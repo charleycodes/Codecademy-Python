@@ -1,0 +1,11 @@
+# define a function is_even that will take a number x as input
+# if x is even, then return True
+# otherwise, return False
+
+def is_even(x):
+    if x % 2 == 0: # if x modulo 2 is 0, the number is even
+        return True # True, the number is even
+    else:
+        return False # if not, False, the number is not even (it is odd)
+
+print is_even(4) # prints True
