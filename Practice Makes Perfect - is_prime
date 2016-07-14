@@ -1,0 +1,27 @@
+# A prime number is a positive integer greater than 1 that has no positive divisors other than 1 and itself. (Boy, that's a mouthful.)
+# In other words, if you want to test if a number in a variable x is prime, then no other number should go into x evenly besides 1 and x. 
+# So 2 and 5 and 11 are all prime, but 4 and 18 and 21 are not.
+
+# If there is a number between 1 and x that goes in evenly, then x is not prime.
+
+# Define a function called is_prime that takes a number x as input
+# For each number n from 2 to (x - 1), test if x is evenly divisible by n
+# If it is, return False
+if none of them are, then return True
+
+# Remember, all numbers less than 2 are not prime numbers!
+
+def is_prime(x):
+    if x < 2:
+        return False # all numbers less than 2 are not prime numbers
+    elif x == 2 or x == 3:
+        return True # 2 and 3 are both prime numbers
+    else:
+        for n in range(2, (x - 1)): # top of range is x - 1 because we know that x goes into itself
+            if x % n == 0: # if n goes into x evenly
+                return False # x is not prime
+                break # don't need to continue to evaluate if we already know it's not prime
+    return True # if all of that executes, then the number is prime
+
+print is_prime(5) # prints True
+print is_prime(6) # prints False
