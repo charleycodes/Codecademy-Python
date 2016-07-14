@@ -11,3 +11,12 @@
 
 # Also, note that destructively modifying a list while you are looping through it is bad practice and will likely lead to bugs somewhere 
 # down the line! That's why we always make a fresh copy to work on.
+
+def remove_duplicates(number_list):
+    no_dupes = [] # create an empty list
+    for number in number_list: # go through each number in our original list
+        if number not in no_dupes: # if the number is not already in our dupe'less list, add it to the dupe'less list
+            no_dupes.append(number)
+    return no_dupes
+
+print remove_duplicates([1, 1, 2, 2]) # returns [1, 2]
