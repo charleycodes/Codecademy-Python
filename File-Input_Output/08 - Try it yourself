@@ -1,0 +1,15 @@
+# It worked! Our Python program successfully wrote to text.txt.
+
+# Instructions
+# Now you try: write any data you like to the text.txt file using with...as. Give your file object the usual name: my_file.
+
+# Hint
+# Remember your syntax:
+
+"""
+with open("file","mode") as variable:
+    # Read or write to the file
+"""
+
+with open("text.txt", "w") as textfile:
+    textfile.write("Almost through the Python module!")
